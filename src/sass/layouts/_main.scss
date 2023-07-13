@@ -1,0 +1,212 @@
+.main__section {
+  height: 100vh;
+  padding: 20px;
+  background-color: #edf0f2;
+  h2 {
+    font-size: 44px;
+    text-transform: capitalize;
+    text-align: center;
+  }
+  &_container {
+    // margin-top: 25px;
+    height: 80vh;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-y: scroll;
+  }
+  .no_data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+    width: 100%;
+    color: #379fff;
+    text-align: center;
+    gap: 24px;
+
+    h1 {
+      font-size: 40px;
+    }
+    p{
+        font-size: 24px;
+    }
+  }
+  &_card {
+    position: relative;
+    height: 230px;
+    width: 260px;
+    margin-top: 20px;
+    margin-right: 24px;
+    border-radius: 14px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 3px 3px 3px 0px rgba(184, 184, 184, 1);
+    
+    .card_bg {
+      position: relative;
+      height: 100px;
+      border-top-left-radius: 14px;
+      border-top-right-radius: 14px;
+      background-image: linear-gradient(
+        to right top,
+        #3f8cff,
+        #379fff,
+        #45b1ff,
+        #5fc2ff,
+        #7dd1ff
+      );
+      img {
+        position: relative;
+        left: 35%;
+        bottom: -50px;
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+      }
+    }
+    .card_detail {
+      //   margin-top: 35px;
+      //   padding: 20px;
+      p {
+        text-transform: capitalize;
+        font-size: 12px;
+        color: #000000;
+        margin-bottom: 12px;
+        small {
+          // font-size: 10px;
+          color: #379fff;
+        }
+      }
+    }
+    .card_process {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 5px;
+
+      button {
+        text-align: center;
+        padding: 12px;
+        font-size: small;
+
+        &:nth-child(1) {
+          cursor: pointer;
+          width: 80px;
+          border-radius: 5px;
+          margin-right: 20px;
+          background-color: #379fff;
+        }
+        &:nth-child(2) {
+          cursor: pointer;
+          border-radius: 5px;
+          width: 80px;
+          color: #fff;
+          background-color: rgb(176, 27, 27);
+        }
+      }
+      span {
+        cursor: pointer;
+        padding: 12px;
+        border-radius: 50%;
+        margin-right: 20px;
+        border: 1px solid lightgray;
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+        svg {
+          height: 20px;
+          width: 20px;
+          path {
+            fill: #379fff;
+          }
+        }
+      }
+    }
+  }
+  #add_mem_btn {
+    padding: 14px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #379fff;
+    cursor: pointer;
+  }
+  #reset_btn {
+    @extend #add_mem_btn;
+    color: #000000;
+    background-color: #ffc95f;
+  }
+
+  .modal {
+    width: 35%;
+    padding: 34px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    border-radius: 14px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    display: none;
+
+    &.show {
+      display: block;
+      h3 {
+        font-size: 32px;
+        font-weight: 600;
+        text-align: center;
+        color: gray;
+      }
+      input {
+        margin-bottom: 15px;
+        padding: 12px;
+        font-size: 14px;
+        display: block;
+        width: 100%;
+        border-radius: 3px;
+        border: 0.3px solid rgb(194, 194, 194);
+      }
+      .btn_flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .add_btn {
+          text-transform: capitalize;
+          cursor: pointer;
+          color: #fff;
+          padding: 12px 35px;
+          border-radius: 5px;
+          width: 50%;
+          margin: 20px 10px;
+          background-color: #ffc95f;
+        }
+        .update_btn {
+            @extend .add_btn;
+          }
+        .close_btn {
+          @extend .add_btn;
+          background-color: rgb(199, 29, 29);
+        }
+      }
+    }
+  }
+  .overflow {
+    display: none;
+    &.show {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: rgba(73, 73, 73, 0.5);
+      backdrop-filter: blur(3px);
+    }
+  }
+}
