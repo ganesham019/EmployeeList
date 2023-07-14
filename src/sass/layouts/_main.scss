@@ -205,4 +205,16 @@
       backdrop-filter: blur(3px);
     }
   }
+  @media (max-width: 800px){
+   
+      h2{
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+    
+    .main__section_card{
+      width: 100%;
+      margin: 10px;
+    }
+  }
 }
