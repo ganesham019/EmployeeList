@@ -38,18 +38,19 @@
   }
   &_card {
     position: relative;
-    height: 230px;
+    // height: 230px;
     width: 260px;
     margin-top: 20px;
     margin-right: 24px;
     border-radius: 14px;
-    padding: 20px;
+    // padding: 20px;
     background-color: #fff;
     box-shadow: 3px 3px 3px 0px rgba(184, 184, 184, 1);
     
     .card_bg {
       position: relative;
-      height: 100px;
+      height: 130px;
+      // width: 200px;
       border-top-left-radius: 14px;
       border-top-right-radius: 14px;
       background-image: linear-gradient(
@@ -62,21 +63,25 @@
       );
       img {
         position: relative;
-        left: 35%;
+        left: 26%;
+        border-radius: 50%;
         bottom: -50px;
-        width: 80px;
-        height: 80px;
+        background-color: #fff;
+        // padding: 20px;
+        width: 120px;
+        height: 120px;
         object-fit: cover;
       }
     }
     .card_detail {
-      //   margin-top: 35px;
-      //   padding: 20px;
+        margin-top: 35px;
+        padding: 20px;
       p {
         text-transform: capitalize;
         font-size: 12px;
         color: #000000;
         margin-bottom: 12px;
+        word-break: break-all;
         small {
           // font-size: 10px;
           color: #379fff;
@@ -87,7 +92,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 5px;
+      margin-bottom: 20px;
 
       button {
         text-align: center;
@@ -128,7 +133,7 @@
       }
     }
   }
-  #add_mem_btn {
+  .add_mem_btn {
     padding: 14px;
     margin-bottom: 10px;
     font-size: 22px;
@@ -137,8 +142,8 @@
     background-color: #379fff;
     cursor: pointer;
   }
-  #reset_btn {
-    @extend #add_mem_btn;
+  .reset_btn {
+    @extend .add_mem_btn;
     color: #000000;
     background-color: #ffc95f;
   }
@@ -156,7 +161,7 @@
     display: none;
 
     &.show {
-      display: block;
+        display: block;
       h3 {
         font-size: 32px;
         font-weight: 600;
@@ -164,13 +169,19 @@
         color: gray;
       }
       input {
-        margin-bottom: 15px;
+        margin-bottom: 5px;
         padding: 12px;
         font-size: 14px;
         display: block;
         width: 100%;
         border-radius: 3px;
         border: 0.3px solid rgb(194, 194, 194);
+      }
+      small{
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: red;
+        display: block;
       }
       .btn_flex {
         display: flex;

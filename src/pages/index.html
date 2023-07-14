@@ -12,8 +12,8 @@
     <main>
       <section class="main__section">
         <h2>management Service</h2>
-        <button class="" id="add_mem_btn">Add Employee</button>
-        <button class="" id="reset_btn">Reset</button>
+        <button class="add_mem_btn" id="add_mem_btn">Add Employee</button>
+        <button class="reset_btn" id="reset_btn">Reset</button>
         <ul class="main__section_container" id="main__section_container"></ul>
         <div class="overflow" id="overflow"></div>
         <section class="modal" id="modal">
@@ -27,6 +27,8 @@
               placeholder="Firstname"
               required
             />
+            <small id="usernameErr"></small>
+
             <input
               type="text"
               name="surname"
@@ -35,6 +37,7 @@
               placeholder="Lastname"
               required
             />
+            <small id="surnameErr"></small>
             <input
               type="email"
               name="email"
@@ -42,6 +45,8 @@
               required
               placeholder="Email"
             />
+            <small id="emailErr"></small>
+
             <input
               type="number"
               name="salery"
@@ -49,9 +54,19 @@
               placeholder="Salery"
               required
             />
+            <small id="saleryErr"></small>
+
+            <input
+              class="form-control form-control-lg"
+              id="selectAvatar"
+              name="profile"
+              type="file"
+              accept="image/png, image/gif, image/jpeg"
+            />
+
             <div class="btn_flex">
               <button class="add_btn" id="add_btn">Add</button>
-              <button class="update_btn" id="update_btn">update</button>
+              <button class="update_btn hidden" id="update_btn">update</button>
               <button class="close_btn" id="close_btn">close</button>
             </div>
           </form>
