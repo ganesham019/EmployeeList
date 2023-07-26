@@ -9,11 +9,6 @@ module.exports = merge(common,{
     devServer: {
         static: path.resolve(__dirname, "./")
     },
-    output: {
-        filename: "js/bundle.js",
-        path: path.resolve(__dirname, "dist"),
-        assetModuleFilename: "images/[name].[hash][ext]"
-    },
     module: {
         rules: [
             {

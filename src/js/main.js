@@ -1,5 +1,4 @@
 
-// functions for modal
 const addIcon = document.getElementById("add_mem_btn");
 const closeBtn = document.getElementById("close_btn");
 const overflow = document.getElementById("overflow");
@@ -88,7 +87,6 @@ let dataLists = [];
 const convertBase64 = (file) => {
     return new Promise((resolve) => {
         const fileReader = new FileReader();
-        console.log(fileReader)
         // filereader method readAsDataURL - it is read the content and return the dara url
         fileReader.readAsDataURL(file);
 
@@ -252,11 +250,9 @@ updateBtn.addEventListener("click", (e) => {
             dataLists = [];
             resetBtn.style.opacity = "0.5";
         }
-
         if (file == null) {
             base64 = dataLists[index].profile;
         }
-
         dataLists[index].name = userNameInput.value;
         dataLists[index].surname = surNameInput.value;
         dataLists[index].email = emailInput.value;
